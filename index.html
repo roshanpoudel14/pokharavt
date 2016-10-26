@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Pokhara Virtual Tour</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+<style >#mapid { height: 690px; }</style>
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+</head>
+<body>
+ <div id="mapid"></div>
+ <script>
+ var mymap = L.map('mapid').setView([28.2031,83.9824], 13.2955);
+ L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'your.mapbox.project.id',
+    accessToken: 'your.mapbox.public.access.token'
+    }).addTo(mymap);
+ 	var temple_icon = L.icon({iconUrl:"icon/temple.png",iconSize:[48,48]})
+ 	var lake_icon = L.icon({iconUrl:"icon/lake.png",iconSize:[48,48]})
+ 	var cave_icon = L.icon({iconUrl:"icon/cave.png",iconSize:[48,48]})
+ 	var viewpoint_icon = L.icon({iconUrl:"icon/Viewpoint.png",iconSize:[48,48]})
+ 	var pagoda_icon = L.icon({iconUrl:"icon/pagoda.png",iconSize:[48,48]})
+ 	var museum_icon = L.icon({iconUrl:"icon/museum.png",iconSize:[48,48]})
+ 	var monastry_icon = L.icon({iconUrl:"icon/monastry.png",iconSize:[48,48]})
+ 	
+    var fewa=L.marker([28.2155,83.9461],{icon:lake_icon}).addTo(mymap).bindPopup('Phewa Lake <img src="images/phewa_lake/phewalake.jpg" alt="Smiley face" height="315" width="560"></br></br> <iframe width="560" height="315" src="https://www.youtube.com/embed/74tSAftTZsA" frameborder="0" allowfullscreen></iframe>',{maxWidth:"auto"} );
+	var peace=L.marker([28.20103,83.94476],{icon:pagoda_icon}).addTo(mymap)
+		.bindPopup("<b>Peace Pagoda</b>");
+	var pumdi=L.marker([28.20178,83.94016],{icon:viewpoint_icon}).addTo(mymap)
+		.bindPopup("<b>Pumdi View Tower</b>");
+	var bahari=L.marker([28.20737,83.95356],{icon:temple_icon}).addTo(mymap)
+		.bindPopup('Taal Bahari Temple');
+	var binda=L.marker([28.23769,83.98410],{icon:temple_icon}).addTo(mymap)
+		.bindPopup("<b>Bindabashani Temple</b>");
+	var saran=L.marker([28.24399,83.95757],{icon:viewpoint_icon}).addTo(mymap)
+		.bindPopup("<b>Sarangkot View Point</b>");
+	var devis=L.marker([28.19009,83.95924],{icon:viewpoint_icon}).addTo(mymap)
+		.bindPopup("<b>Davies Fall</b>");
+	var mate=L.marker([28.21643,84.00729],{icon:monastry_icon}).addTo(mymap)
+		.bindPopup("<b>Matepani Monastry</b>");
+	var mahe=L.marker([28.27168,83.97937],{icon:cave_icon}).addTo(mymap)
+		.bindPopup("<b>Mahendra Cave</b>");
+	var bat=L.marker([28.26758,83.97570],{icon:cave_icon}).addTo(mymap)
+		.bindPopup("<b>Bat Cave</b>");
+	var gup=L.marker([28.18922,83.95770],{icon:cave_icon}).addTo(mymap)
+		.bindPopup("<b>Gupteshwor Cave</b>");
+	var kahu=L.marker([28.23955,84.01059],{icon:viewpoint_icon}).addTo(mymap)
+		.bindPopup("<b>Kahun View Tower</b>");
+	var seti =L.marker([28.24564,83.98941],{icon:viewpoint_icon}).addTo(mymap)
+		.bindPopup("<b>Seti George View Point</b>");
+	var moun=L.marker([28.18937,83.98106],{icon:museum_icon}).addTo(mymap)
+		.bindPopup("<b>International Mountain Museum</b>");
+	var Temples=L.layerGroup([bahari,binda])
+	var Lake=L.layerGroup([fewa])
+	var Viewpoint=L.layerGroup([seti,pumdi,saran,devis,kahu])
+	var Cave=L.layerGroup([mahe,bat,gup])
+	var Museum=L.layerGroup([moun,])
+	var Gumba=L.layerGroup([mate])
+	var Pagoda=L.layerGroup([peace])
+	var overlayMaps = {
+	"<img src='icon/temple.png'height='20' width='20'> <span class='Temple'>Temple</span>": Temples,
+    "<img src='icon/lake.png'height='20' width='20'> <span class='Lake'>Lake</span>": Lake, 
+    "<img src='icon/viewpoint.png'height='20' width='20'> <span class='Viewpoint'>Viewpoint</span>": Viewpoint,
+    "<img src='icon/cave.png'height='20' width='20'> <span class='Cave'>Cave</span>": Cave,
+    "<img src='icon/museum.png'height='20' width='20'> <span class='Museum'>Museum</span>": Museum,
+    "<img src='icon/monastry.png'height='20' width='20'> <span class='Gumba'>Monastry</span>": Gumba,
+    "<img src='icon/pagoda.png'height='20' width='20'> <span class='Pagoda'>Pagoda</span>": Pagoda,
+	};
+L.control.layers(null,overlayMaps).addTo(mymap);
+</script>
+</body>
+</html>
