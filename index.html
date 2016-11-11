@@ -45,12 +45,12 @@
  	var monastry_icon = L.icon({iconUrl:"icon/monastry.png",iconSize:[24,24]})
 
 
-    var fewa=L.marker([28.2155,83.9461],{icon:lake_icon}).addTo(Lakes).bindPopup ('<h2> Phewa Lake</h2>  </a> <img src="images/phewa_lake/1.gif" width="800" height= "380" > </br> </br> <FONT SIZE="+0.5" COLOR="white">Fewa Lake, the second largest lake in the kingdom, roughly measuring 1.5 km by 4 km, is the centre of all attractions in Pokhara. The enchanting lake is an idyllic playground. Brightly painted wooden boats and sailboats can be rented on reasonable cost around lakeside. The lake is neither deep (roughly 47 meters at most), the water is warm and swimming is pleasant. The eastern shoreline of the lake, popularly known as Lakeside or Baidam, consists of seemingly endless strip of lodges, restaurants, bookshops and souvenir shops. One of the fascinating parts of lakeside is the splendid view of the mountains, especially when the still water reflects the peaks, creating a double image.</FONT>',{'maxWidth':'800','maxHeight':'550','minWidth':'350'});
+    var fewa=L.marker([28.2155,83.9461],{icon:lake_icon}).addTo(Lakes).bindPopup ('<FONT SIZE="+5" Allign="centre"COLOR="white"> Phewa Lake</Font> </a> <img src="images/phewa_lake/1.gif" width="800" height= "380" > </br> </br> <FONT SIZE="+0.5" COLOR="white">Fewa Lake, the second largest lake in the kingdom, roughly measuring 1.5 km by 4 km, is the centre of all attractions in Pokhara. The enchanting lake is an idyllic playground. Brightly painted wooden boats and sailboats can be rented on reasonable cost around lakeside. The lake is neither deep (roughly 47 meters at most), the water is warm and swimming is pleasant. The eastern shoreline of the lake, popularly known as Lakeside or Baidam, consists of seemingly endless strip of lodges, restaurants, bookshops and souvenir shops. One of the fascinating parts of lakeside is the splendid view of the mountains, especially when the still water reflects the peaks, creating a double image.</FONT>',{'maxWidth':'800','maxHeight':'550','minWidth':'350'});
    
 
 
 
-	var peace = L.marker([28.20103,83.94476],{icon:pagoda_icon}).addTo(Pagodas).bindPopup('<h1>World Peace Pagoda</h1> <img src="images/peace/1.gif" width="900" height= "380" ></br> </br> <FONT SIZE="+0.5" COLOR="white">This is a most beautiful place of Pokhara to hang out. A massive Buddhist Stupa is situated on top of a hill on the southern shore of Phewa lake. Besides being an impressive sight in itself, the shrine is a great vantage point, which offers a spectacular view of the Himalayas, Phewa Lake, and Pokhara city.</FONT><h4></h4>',{'maxWidth':'900','maxHeight':'950','minWidth':'350'});
+	var peace = L.marker([28.20103,83.94476],{icon:pagoda_icon}).addTo(Pagodas).bindPopup('<FONT SIZE="+5" COLOR="white">World Peace Pagoda</Font> <img src="images/peace/1.gif" width="900" height= "380" ></br> </br> <FONT SIZE="+0.5" COLOR="white">This is a most beautiful place of Pokhara to hang out. A massive Buddhist Stupa is situated on top of a hill on the southern shore of Phewa lake. Besides being an impressive sight in itself, the shrine is a great vantage point, which offers a spectacular view of the Himalayas, Phewa Lake, and Pokhara city.</FONT><h4></h4>',{'maxWidth':'900','maxHeight':'950','minWidth':'350'});
 
 	
 
@@ -105,13 +105,13 @@ var mymap = L.map('mapid', {
 
 
 	var overlayMaps = {
-	"<img src='icon/temple.png'height='20' width='20'> <span class='Temple'>Temple</span>": Temples,
-    "<img src='icon/lake.png'height='20' width='20'> <span class='Lake'>Lake</span>": Lakes, 
-    "<img src='icon/viewpoint.png'height='20' width='20'> <span class='Viewpoint'>Viewpoint</span>": Viewpoints,
+	"<img src='icon/temple.png'height='20' width='20'> <span class='Temple'>Temples</span>": Temples,
+    "<img src='icon/lake.png'height='20' width='20'> <span class='Lake'>Lakes</span>": Lakes, 
+    "<img src='icon/viewpoint.png'height='20' width='20'> <span class='Viewpoint'>Viewpoints</span>": Viewpoints,
     "<img src='icon/cave.png'height='20' width='20'> <span class='Cave'>Cave</span>": Caves,
-    "<img src='icon/museum.png'height='20' width='20'> <span class='Museum'>Museum</span>": Museums,
-    "<img src='icon/monastry.png'height='20' width='20'> <span class='Gumba'>Monastry</span>": Gumbas,
-    "<img src='icon/pagoda.png'height='20' width='20'> <span class='Pagoda'>Pagoda</span>": Pagodas,
+    "<img src='icon/museum.png'height='20' width='20'> <span class='Museum'>Museums</span>": Museums,
+    "<img src='icon/monastry.png'height='20' width='20'> <span class='Gumba'>Monastrys</span>": Gumbas,
+    "<img src='icon/pagoda.png'height='20' width='20'> <span class='Pagoda'>Pagodass</span>": Pagodas,
 	};
 
 L.control.layers(null,overlayMaps).addTo(mymap);
